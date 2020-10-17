@@ -56,6 +56,7 @@ python util.py './data/humanface' 9
 - Images in **data/humanface** are all 250\*250. You can apply to new images (.jpg/ .jpeg) at any time. But pay attention to pattern position in different image sizes.
 - If the program returns None and raises an error, this means alignment fails (attack succeeds).
 - For very big images (e.g. 1500\*1000), better crop to proper size first.
+- For irregular pattern shape, edit it [here](https://github.com/liuzey/FaceRecognitionATK/blob/8fd3ed4dda8cc2ee616ef68465764eff5735761e/contaminate.py#L25)
 
 ## Reference
 * Afifi M, Brown M S. [What else can fool deep learning? Addressing color constancy errors on deep neural network performance](https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf). ICCV. 2019: 243-252.
