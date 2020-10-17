@@ -43,7 +43,7 @@ For this example, you are running an attack with:
 
 ![](Figure_1.png)
 
-To compare with original alignment without pollution, you can run with benign parameter set or simply pass no optional parameters.
+To compare with correct alignment without attack, you can run with benign parameter set or simply pass no optional parameters.
 ```bash
 python util.py './data/humanface' 9 -i 0 -r 1.0 -a 0 -b 0 -c 0 -d 0
 ```
