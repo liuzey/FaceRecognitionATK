@@ -55,7 +55,7 @@ python util.py './data/humanface' 9
 ### Comments
 - Images in **data/humanface** are all 250\*250. You can apply to new images (.jpg/ .jpeg) at any time. But pay attention to pattern position in different image sizes.
 - If the program returns None and raises an error, this means alignment fails (attack succeeds).
-- For very big images (e.g. 1500\*1000), better crop to proper size first.
+- For very big images (e.g. 2000\*1500), better crop to proper size first.
 - For irregular pattern shape (e.g. circles), edit it [here](https://github.com/liuzey/FaceRecognitionATK/blob/8fd3ed4dda8cc2ee616ef68465764eff5735761e/contaminate.py#L25).
 
 ## Reference
