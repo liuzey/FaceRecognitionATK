@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Usage
 ### Positional & Optional Parameters
-* **data**: Data path, e.g. './data/humanface'
+* **data**: Image dir path, e.g. './data/humanface'
 * **n**: Image index to attack.
 * **-i, --inten**: Added signals intensity. R(red) channel. Automatically cropped to 0-255.
 * **-r, --ratio**: Decay ratio. B(blue) & G(green) channels. (0.0~1.0)
