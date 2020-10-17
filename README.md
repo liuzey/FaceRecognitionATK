@@ -3,11 +3,11 @@
 
 ## Setup
 ### Environment
-- Python 3.8
-- MacOS or Linux
+* Python 3.8
+* MacOS or Linux
 
 ### Steps
-- Recommend setting up a virtual environment. (Old version of Keras & Tensorflow to install.)
+* Recommend setting up a virtual environment. (Old version of Keras & Tensorflow to install.)
 ```bash
 pip install virtualenv
 
@@ -15,33 +15,33 @@ virtualenv FaceRecognition
 
 source ./FaceRecognition/bin/activate
 ```
-- Install packages in **requirements.txt**.
+* Install packages in **requirements.txt**.
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Usage
 ### Parameters
-- **data**: Data path, e.g. './data/humanface'
-- **n**: Image index to attack.
-- **-i, --inten**: Added signals intensity. R(red) channel. Automatically cropped to 0-255.
-- **-r, --ratio**: Decay ratio. B(blue) & G(green) channels. (0.0~1.0)
-- **-a**: Starting polluting pixel in x axis (top-left).
-- **-b**: Ending polluting pixel in x axis (bottom-left).
-- **-c**: Starting polluting pixel in y axis (top-right).
-- **-d**: Ending polluting pixel in y axis (bottom-right).
+* **data**: Data path, e.g. './data/humanface'
+* **n**: Image index to attack.
+* **-i, --inten**: Added signals intensity. R(red) channel. Automatically cropped to 0-255.
+* **-r, --ratio**: Decay ratio. B(blue) & G(green) channels. (0.0~1.0)
+* **-a**: Starting polluting pixel in x axis (top-left).
+* **-b**: Ending polluting pixel in x axis (bottom-left).
+* **-c**: Starting polluting pixel in y axis (top-right).
+* **-d**: Ending polluting pixel in y axis (bottom-right).
 
 ### Example
 ```bash
 python util.py './data/humanface' 9 -i 60 -r 0.4 -a 75 -b 175 -c 75 -d 175
 ```
 For this example, you are running an attack with:
-- Attacking the tenth image. (n=9)
-- 100\*100 Pattern position in the middle. (\[-a,-b,-c,-d]=\[75,175,75,175] in a 250\*250 image)
-- R adds 60. (-i=60)
-- GB decay to 40%. (-r=0.4)
+* Attacking the tenth image. (n=9)
+* 100\*100 Pattern position in the middle. (\[-a,-b,-c,-d]=\[75,175,75,175] in a 250\*250 image)
+* R adds 60. (-i=60)
+* GB decay to 40%. (-r=0.4)
 
-![]()
+![](Figure_1.png)
 
 ## Reference
 * Afifi M, Brown M S. [What else can fool deep learning? Addressing color constancy errors on deep neural network performance](https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf). ICCV. 2019: 243-252.
