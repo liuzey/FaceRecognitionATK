@@ -65,8 +65,7 @@ python util.py './data/humanface' 9
 
 ## Schedule
 - [x] Theoretical attack for face alignments.
-  - [x] Exposure.
-  - [x] White-Balance.
+  - [x] Exposure or White-Balance.
   - [x] Cheating with T-shirts.
 - [ ] Theoretical model for lens tolerance and adjustment.
 - [ ] Real parameters measurement and attacks.
