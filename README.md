@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-### Parameters
+### Positional & Optional Parameters
 * **data**: Data path, e.g. './data/humanface'
 * **n**: Image index to attack.
 * **-i, --inten**: Added signals intensity. R(red) channel. Automatically cropped to 0-255.
@@ -42,6 +42,15 @@ For this example, you are running an attack with:
 * GB decay to 40%. (-r=0.4)
 
 ![](Figure_1.png)
+
+To compare with original alignment without pollution, you can run with benign parameter set or simply pass no optional parameters.
+```bash
+python util.py './data/humanface' 9 -i 0 -r 1.0 -a 0 -b 0 -c 0 -d 0
+```
+or
+```bash
+python util.py './data/humanface' 9
+```
 
 ### Comments
 - Images in **humanface** are all 250\*250. You can apply to new images (.jpg/ .jpeg) at any time. But pay attention to pattern position in different image sizes.
