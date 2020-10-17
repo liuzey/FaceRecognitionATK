@@ -41,7 +41,7 @@ For this example, you are running an attack with:
 * R adds 60. (-i=60)
 * GB decay to 40%. (-r=0.4)
 
-![](Figure_1.png)
+![]()
 
 ## Reference
 * Afifi M, Brown M S. [What else can fool deep learning? Addressing color constancy errors on deep neural network performance](https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf). ICCV. 2019: 243-252.
