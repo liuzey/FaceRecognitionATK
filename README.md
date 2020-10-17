@@ -37,14 +37,14 @@ python util.py './data/humanface' 9 -i 60 -r 0.4 -a 75 -b 175 -c 75 -d 175
 ```
 For this example, you are running an attack with:
 * Attacking the tenth image. (n=9)
-* 100\*100 Pattern position in the middle. (\[-a,-b,-c,-d]=\[75,175,75,175] in a 250\*250 image)
+* Place a 100\*100 Pattern position in the middle. (\[-a,-b,-c,-d]=\[75,175,75,175] in a 250\*250 image)
 * R adds 60. (-i=60)
 * GB decay to 40%. (-r=0.4)
 
 ![](Figure_1.png)
 
 ### Comments
-- Images in **humanface** are all 250\*250. You can apply to new images (.jpg or .jpeg) at any time. But pay attention to different image size for pattern position.
+- Images in **humanface** are all 250\*250. You can apply to new images (.jpg/ .jpeg) at any time. But pay attention to pattern position in different image sizes.
 - If the program returns None and raises an error, this means alignment fails (attack succeeds).
 - For very big images (e.g. 1500\*1000), better crop to proper size first.
 
