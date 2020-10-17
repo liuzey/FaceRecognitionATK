@@ -67,7 +67,7 @@ python util.py './data/humanface' 9
 - [x] Theoretical attack for face alignments.
   - [x] Exposure or White-Balance.
   - [x] Cheating with T-shirts.
-- [ ] Theoretical model for lens tolerance and adjustment.
-- [ ] Real parameters measurement and attacks.
-- [ ] Theoretical attack for face recognition (identity misclassification).
+- [ ] Theoretical models for lens tolerance and adjustment.
+- [ ] Real parameter acquisition and evasion attack implementation.
+- [ ] Theoretical attacks for face recognition (identity misclassification).
 - [ ] Real face recognition attacks.
