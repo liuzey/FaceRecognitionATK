@@ -70,5 +70,5 @@ python util.py './data/humanface' 9
   - [x] Cheating with T-shirts.
 - [ ] Theoretical models for lens tolerance and adjustment.
 - [ ] Real parameter acquisition and evasion attack implementation.
-- [ ] Theoretical attacks for face recognition (identity misclassification).
+- [ ] Theoretical attacks for face recognition (misidentification).
 - [ ] Real face recognition attacks.
