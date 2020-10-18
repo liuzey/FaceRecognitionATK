@@ -21,8 +21,8 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-### Parameters
-* **data**: Data path, e.g. './data/humanface'
+### Positional & Optional Parameters
+* **data**: Image dir path, e.g. './data/humanface'
 * **n**: Image index to attack.
 * **-i, --inten**: Added signals intensity. R(red) channel. Automatically cropped to 0-255.
 * **-r, --ratio**: Decay ratio. B(blue) & G(green) channels. (0.0~1.0)
@@ -37,11 +37,26 @@ python util.py './data/humanface' 9 -i 60 -r 0.4 -a 75 -b 175 -c 75 -d 175
 ```
 For this example, you are running an attack with:
 * Attacking the tenth image. (n=9)
-* 100\*100 Pattern position in the middle. (\[-a,-b,-c,-d]=\[75,175,75,175] in a 250\*250 image)
+* Place a 100\*100 Pattern position in the middle. (\[-a,-b,-c,-d]=\[75,175,75,175] in a 250\*250 image)
 * R adds 60. (-i=60)
 * GB decay to 40%. (-r=0.4)
 
-![]()
+![](Figure_1.png)
+
+To compare with correct alignment without attack, you can run with benign parameter set or simply pass no optional parameters.
+```bash
+python util.py './data/humanface' 9 -i 0 -r 1.0 -a 0 -b 0 -c 0 -d 0
+```
+or
+```bash
+python util.py './data/humanface' 9
+```
+
+### Comments
+- Images in **data/humanface** are all 250\*250. You can apply to new images (.jpg/ .jpeg) at any time. But pay attention to pattern position in different image sizes.
+- If the program returns None and raises an error, this means alignment fails (attack succeeds).
+- For very big images (e.g. 2000\*1500), better crop to proper size first.
+- For irregular pattern shape (e.g. circles), edit it [here](https://github.com/liuzey/FaceRecognitionATK/blob/762058053c6b2c42c6100410924bc5c1a41da809/contaminate.py#L25).
 
 ## Reference
 * Afifi M, Brown M S. [What else can fool deep learning? Addressing color constancy errors on deep neural network performance](https://openaccess.thecvf.com/content_ICCV_2019/papers/Afifi_What_Else_Can_Fool_Deep_Learning_Addressing_Color_Constancy_Errors_ICCV_2019_paper.pdf). ICCV. 2019: 243-252.
@@ -51,10 +66,9 @@ For this example, you are running an attack with:
 
 ## Schedule
 - [x] Theoretical attack for face alignments.
-  - [x] Exposure.
-  - [x] White-Balance.
+  - [x] Exposure or White-Balance.
   - [x] Cheating with T-shirts.
-- [ ] Theoretical model for lens tolerance and adjustment.
-- [ ] Real parameters measurement and attacks.
-- [ ] Theoretical attack for face recognition (identity misclassification).
+- [ ] Theoretical models for lens tolerance and adjustment.
+- [ ] Real parameter acquisition and evasion attack implementation.
+- [ ] Theoretical attacks for face recognition (identity misclassification).
 - [ ] Real face recognition attacks.

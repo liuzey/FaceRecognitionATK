@@ -25,6 +25,7 @@ def add_signal(Y, a, b, c, d, intensity, ratio):
     # If you try to use irregular pattern, try use index list like follows:
     # list1 = list(range(5,25))
     # list1.extend(list(range(45,65)))
+    # for i in range(list1)
 
     for i in range(b-a):
         for j in range(d-c):
