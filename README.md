@@ -19,8 +19,40 @@ source ./FaceRecognition/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
+## Usage-Circle
+### Positional & Optional Parameters
+* **data**: Image dir path, e.g. './data/humanface'
+* **n**: Image index to attack.
+* **-i**: Added signals intensity. R(red) channel/Pink. Automatically cropped to 0-255.
+* **-r**: Decay ratio. B(blue) & G(green) channels. (0.0~1.0)
+* **-x**: Circle center in x axis.
+* **-y**: Circle center in y axis.
+* **-d**: Radius of the circle.
+* **-t**: Type of perturbation: 'Gaussian' or 'Flaptop'. Guassian for gaussian distribution. Flaptop for consistent values in all pixels.
+* **-hs**: Color type: 'red' or 'white'. 'red' for only intensity in R channel. 'white' for adding pink (255, 105, 180) color as shown in photos, white in the middle when -t=='Gaussian'.
 
-## Usage
+### Example
+```bash
+python util_c.py './data/humanface' 9 -i 200 -r 1.0 -x 125 -y 125 -d 20 -t 'Gaussian' -hs 'white'
+```
+For this example, you are running an attack with:
+* Attacking the tenth image. (n=9)
+* Place a pink cicle at coordinate \[125, 125] (middle) with a radius of 20.
+* Intensity of perturbation follows Gaussian Distribution.
+
+![](Figure_2.png)
+
+```bash
+python util_c.py './data/humanface' 10 -i 200 -r 1.0 -x 80 -y 200 -d 30 -t 'Flaptop' -hs 'red'
+```
+For this example, you are running an attack with:
+* Attacking the eleventh image. (n=10)
+* Place a pure red cicle at coordinate \[80, 200] with a radius of 30.
+* Intensity of perturbation follows Even Distribution.
+* 
+![](Figure_3.png)
+
+## Usage-Square
 ### Positional & Optional Parameters
 * **data**: Image dir path, e.g. './data/humanface'
 * **n**: Image index to attack.
