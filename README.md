@@ -38,18 +38,20 @@ python util_c.py './data/humanface' 9 -i 200 -r 1.0 -x 125 -y 125 -d 20 -t 'Gaus
 For this example, you are running an attack with:
 * Attacking the tenth image. (n=9)
 * Place a pink cicle at coordinate \[125, 125] (middle) with a radius of 20.
-* Intensity of perturbation follows Gaussian Distribution.
+* Intensity of perturbation follows Gaussian Distribution. The maximum value is 200.
+* -r==1.0 No decay in GB channels.
 
 ![](Figure_2.png)
 
 ```bash
-python util_c.py './data/humanface' 10 -i 200 -r 1.0 -x 80 -y 200 -d 30 -t 'Flaptop' -hs 'red'
+python util_c.py './data/humanface' 10 -i 100 -r 0.4 -x 80 -y 200 -d 30 -t 'Flaptop' -hs 'red'
 ```
 For this example, you are running an attack with:
 * Attacking the eleventh image. (n=10)
 * Place a pure red cicle at coordinate \[80, 200] with a radius of 30.
-* Intensity of perturbation follows Even Distribution.
-* 
+* Intensity of perturbation follows Even Distribution. The value is 100.
+* -r==0.4 Decay rate in GB channels.
+
 ![](Figure_3.png)
 
 ## Usage-Square
